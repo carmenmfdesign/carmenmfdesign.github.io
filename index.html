@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carmen Marcos Fernández · Diseñadora gráfica</title>
+<meta name="description" content="Carmen Marcos Fernández, diseñadora gráfica en Valladolid. Portfolio de identidad visual, packaging, tipografía, cartelería y señalética.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 6c25 0 44 17 44 42S75 94 48 94 6 74 6 49 25 6 50 6z' fill='%23D60B52'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700;6..96,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#D60B52;
+  --magenta-osc:#B00842;
+  --crema:#F2F0EB;
+  --tinta:#221D1E;
+  --gris:#5F5857;
+  --blanco:#FFFFFF;
+  --banda:clamp(14px,2.6vw,38px);
+  --serif:"Bodoni Moda","Bodoni 72","Didot",Georgia,serif;
+  --sans:"Source Sans 3","Myriad Pro","Segoe UI",system-ui,sans-serif;
+  --blob1:58% 42% 52% 48% / 46% 54% 46% 54%;
+  --blob2:46% 54% 42% 58% / 56% 44% 56% 44%;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--crema);color:var(--tinta);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;padding-right:var(--banda)}
+body::after{content:"";position:fixed;top:0;right:0;bottom:0;width:var(--banda);background:var(--magenta);z-index:50}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+
+/* Cabecera */
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--crema) 92%,transparent);backdrop-filter:blur(6px)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}
+.firma{font-family:var(--serif);font-weight:700;font-size:1.25rem;text-decoration:none}
+nav{display:flex;gap:clamp(.9rem,3vw,2rem)}
+nav a{text-decoration:none;font-weight:600;font-size:.98rem}
+nav a:hover{color:var(--magenta)}
+
+/* Portada */
+.portada{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,5vw,5rem);align-items:center;padding-top:clamp(2rem,6vw,5rem);padding-bottom:clamp(4rem,9vw,8rem)}
+.portada h1{font-family:var(--serif);font-weight:800;color:var(--magenta);font-size:clamp(4.2rem,13vw,10.5rem);line-height:.9;letter-spacing:-.02em;margin:0 0 2rem}
+.portada .intro{font-size:clamp(1.15rem,1.8vw,1.4rem);max-width:34ch;margin:0 0 2.2rem}
+.botones{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--magenta);transition:background .2s,color .2s}
+.btn.lleno{background:var(--magenta);color:var(--blanco)}
+.btn.lleno:hover{background:var(--magenta-osc);border-color:var(--magenta-osc)}
+.btn.borde{color:var(--magenta)}
+.btn.borde:hover{background:var(--magenta);color:var(--blanco)}
+.retrato{position:relative;justify-self:center;width:min(100%,360px)}
+.retrato::before{content:"";position:absolute;inset:12% -14% -8% -16%;background:var(--magenta);border-radius:var(--blob1);z-index:-1}
+.retrato img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:999px 999px 6px 6px;filter:grayscale(1)}
+
+/* Secciones de trabajo */
+.categoria{padding-block:clamp(3rem,7vw,6rem)}
+.cat-cab{display:flex;align-items:baseline;gap:1.2rem;flex-wrap:wrap;margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+.cat-cab .num{font-family:var(--serif);font-weight:800;color:var(--magenta);font-size:clamp(3.5rem,9vw,6.5rem);line-height:1}
+.cat-cab h2{font-family:var(--sans);font-weight:600;font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0}
+.cat-intro{max-width:68ch;color:var(--gris);margin:0 0 clamp(2rem,4vw,3rem)}
+
+.proyecto{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;margin-bottom:clamp(3rem,7vw,6rem)}
+.proyecto:last-child{margin-bottom:0}
+.proyecto.inv{grid-template-columns:.9fr 1.1fr}
+.proyecto.inv .media{order:2}
+.media button{all:unset;cursor:zoom-in;display:block;border-radius:6px}
+.media button:focus-visible{outline:3px solid var(--magenta);outline-offset:4px}
+.media img{border-radius:6px;width:100%}
+.mancha{background:var(--magenta);color:var(--blanco);border-radius:var(--blob1);padding:clamp(3rem,6.5vw,5rem) clamp(2.4rem,5.5vw,4.8rem)}
+.proyecto.inv .mancha{border-radius:var(--blob2)}
+.mancha h3{font-family:var(--serif);font-weight:700;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.1;margin:0 0 1rem}
+.mancha p{margin:0 0 .8rem;max-width:46ch}
+.mancha p:last-child{margin-bottom:0}
+.mancha ul{margin:.2rem 0 .8rem;padding-left:1.2rem}
+.etiqueta{display:inline-block;font-size:.85rem;font-weight:600;background:var(--blanco);color:var(--magenta);border-radius:999px;padding:.15rem .75rem;margin-bottom:1rem}
+
+.galeria{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1rem,2.5vw,1.8rem)}
+.galeria.tres{grid-template-columns:repeat(3,1fr)}
+.galeria .ancha{grid-column:1/-1}
+.nota{max-width:68ch;margin:clamp(1.5rem,3vw,2.2rem) 0 0}
+.nota strong{font-family:var(--serif);font-size:1.25rem;color:var(--magenta);display:block;margin-bottom:.2rem}
+.notas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,3vw,2.5rem);margin-top:clamp(2rem,4vw,3rem)}
+.notas .nota{margin:0}
+
+.videos{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1rem,2.5vw,1.8rem)}
+.video{aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--tinta)}
+.video iframe{width:100%;height:100%;border:0;display:block}
+.video-item{margin:0}
+.video-item figcaption{margin-top:.5rem;font-weight:600}
+.video-item figcaption a{color:var(--magenta)}
+
+/* Sobre mí */
+.sobre{background:var(--blanco);padding-block:clamp(4rem,8vw,7rem)}
+.sobre h2,.contacto h2{font-family:var(--serif);font-weight:800;color:var(--magenta);font-size:clamp(2.8rem,7vw,5rem);line-height:1;margin:0 0 2rem}
+.sobre-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem)}
+.sobre-grid p{max-width:60ch;margin:0 0 1rem}
+.sobre h3{font-family:var(--serif);font-weight:700;color:var(--magenta);font-size:1.6rem;margin:2.4rem 0 .8rem}
+.sobre h3:first-child{margin-top:0}
+.dato{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.2rem;margin-bottom:1rem}
+.dato b{color:var(--magenta);font-weight:600}
+.dato span{color:var(--gris)}
+.herramientas{list-style:none;padding:0;margin:0;display:grid;gap:.9rem}
+.herramientas li{display:grid;grid-template-columns:1fr 150px;align-items:center;gap:1rem}
+.herramientas .nombre{color:var(--magenta);font-weight:600;line-height:1.2}
+.herramientas .nivel{display:block;color:var(--tinta);font-weight:400;font-size:.92rem}
+.barra{height:18px;border:2px solid var(--magenta);border-radius:999px;overflow:hidden}
+.barra i{display:block;height:100%;background:var(--magenta);border-radius:999px}
+
+/* Contacto */
+.contacto{padding-top:clamp(4rem,9vw,8rem);padding-bottom:clamp(3rem,6vw,5rem)}
+.contacto p{font-size:1.2rem;max-width:44ch;margin:0 0 2rem}
+.contacto-lista{display:flex;flex-wrap:wrap;gap:.8rem}
+footer{color:var(--gris);font-size:.9rem;padding-bottom:2rem}
+
+/* Visor de imágenes */
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1500px);max-height:94vh}
+dialog::backdrop{background:rgba(34,29,30,.88)}
+dialog img{max-height:88vh;width:auto;margin:0 auto;border-radius:4px}
+dialog .cerrar{position:fixed;top:1rem;right:calc(var(--banda) + 1rem);background:var(--magenta);color:var(--blanco);border:0;border-radius:999px;padding:.6rem 1.1rem;font:600 1rem var(--sans);cursor:pointer}
+
+@media (max-width:820px){
+  .portada,.proyecto,.proyecto.inv,.sobre-grid{grid-template-columns:1fr}
+  .proyecto.inv .media{order:0}
+  .retrato{width:min(70%,300px);margin-top:1rem}
+  .galeria.tres,.notas,.videos{grid-template-columns:1fr}
+  .galeria{grid-template-columns:1fr}
+  nav a.opcional{display:none}
+  .mancha,.proyecto.inv .mancha{border-radius:46% 54% 42% 58% / 14% 18% 14% 18%;padding:2.6rem 1.8rem}
+}
+@media (max-width:420px){
+  .herramientas li{grid-template-columns:1fr 110px}
+  .firma{font-size:1.05rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+        <a class="firma" href="#inicio">Carmen Marcos</a>
+    <nav aria-label="Principal">
+      <a href="#trabajos">Trabajos</a>
+      <a href="#sobre-mi" class="opcional">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="wrap portada">
+    <div>
+      <h1>Portfolio.</h1>
+      <p class="intro">Soy Carmen Marcos Fernández, diseñadora gráfica en Valladolid. Identidad visual, packaging, tipografía, cartelería y señalética.</p>
+      <div class="botones">
+        <a class="btn lleno" href="portfolio.pdf" download="Portfolio-Carmen-Marcos.pdf">Descargar portfolio (PDF)</a>
+        <a class="btn borde" href="cv.pdf" download="CV-Carmen-Marcos.pdf">Descargar CV</a>
+      </div>
+    </div>
+    <figure class="retrato" style="margin:0">
+      <img src="img/retrato.png" alt="Retrato de Carmen Marcos con la banda de graduación de la ESI Valladolid">
+    </figure>
+  </section>
+
+  <div id="trabajos">
+
+  <!-- 01 PACKAGING -->
+  <section class="categoria wrap" aria-labelledby="c1">
+    <div class="cat-cab"><span class="num">01.</span><h2 id="c1">Packaging</h2></div>
+    <p class="cat-intro">Cada packaging utiliza colores, formas, tipografías e ilustraciones propios para transmitir la personalidad del producto.</p>
+    <article class="proyecto">
+      <div class="media"><button data-src="img/baby-tous.png" aria-label="Ampliar imagen de Baby TOUS"><img src="img/baby-tous.png" alt="Caja, frasco, tote bag, peluche y publicación de Instagram para Baby TOUS" loading="lazy"></button></div>
+      <div class="mancha">
+        <h3>Baby TOUS</h3>
+        <p>Diferentes elementos que forman parte de la identidad visual de la marca: la caja del producto, la tote bag y el peluche.</p>
+        <p>Una estética infantil, dulce y reconocible, con colores pastel y motivos florales.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 02 LOGOTIPOS -->
+  <section class="categoria wrap" aria-labelledby="c2">
+    <div class="cat-cab"><span class="num">02.</span><h2 id="c2">Logotipos</h2></div>
+    <p class="cat-intro">Tres identidades para proyectos distintos: una aplicación de rutas, un vino con Denominación de Origen y un cliente ficticio con su propio packaging.</p>
+
+    <article class="proyecto inv">
+      <div class="media"><button data-src="img/bamba.png" aria-label="Ampliar imagen de Bamba"><img src="img/bamba.png" alt="Logotipo de Bamba aplicado en móvil, pegatinas, cuaderno, tote bag y funda" loading="lazy"></button></div>
+      <div class="mancha">
+        <h3>Bamba</h3>
+        <p>Aplicación móvil gratuita que ofrece rutas peatonales seguras para reducir la inseguridad real y percibida en la ciudad.</p>
+        <p>La identidad se basa en la seguridad, la confianza, la sostenibilidad y la comunidad. Sus formas sinuosas y coloridas transmiten:</p>
+        <ul>
+          <li>Protección y tranquilidad al caminar.</li>
+          <li>Innovación a través de una aplicación moderna y accesible.</li>
+          <li>Cercanía y colaboración entre usuarios.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="proyecto">
+      <div class="media"><button data-src="img/psqr.png" aria-label="Ampliar imagen de 47 PSQR"><img src="img/psqr.png" alt="Botella de vino 47 PSQR con etiqueta en linograbado junto a una copa" loading="lazy"></button></div>
+      <div class="mancha">
+        <h3>47 PSQR</h3>
+        <p>Proyecto de autor de Pesquera de Duero (Ribera del Duero). Une el código de Valladolid (47) con un guiño a las siglas romanas SPQR, y apuesta por elaboraciones singulares como la crianza en huevo de hormigón.</p>
+        <p><b>Linograbado:</b> técnica artesanal en blanco y negro que evoca tradición y terruño.</p>
+        <p><b>Mito romano:</b> figura de corte clásico coronada de vid.</p>
+        <p><b>Contraste 47:</b> el trazo magenta rompe el clasicismo para reflejar modernidad y edición limitada.</p>
+      </div>
+    </article>
+
+    <article class="proyecto inv">
+      <div class="media"><button data-src="img/lume.png" aria-label="Ampliar imagen de Lume"><img src="img/lume.png" alt="Cartel, caja y cinta adhesiva con el logotipo ilustrado de Lume" loading="lazy"></button></div>
+      <div class="mancha">
+        <span class="etiqueta">Ejercicio universitario</span>
+        <h3>Lume</h3>
+        <p>Marca para una compañera tratada como cliente real. Tras varias reuniones para recabar información nació Lume, que significa brillo o luz propia, en consonancia con la personalidad de la clienta.</p>
+        <p>El logotipo mezcla tipografía e ilustración: una estrella que refuerza el significado y le da carácter. La gama de color se basa en amarillo y naranja.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 03 CARTELERÍA -->
+  <section class="categoria wrap" aria-labelledby="c3">
+    <div class="cat-cab"><span class="num">03.</span><h2 id="c3">Cartelería</h2></div>
+    <p class="cat-intro">Propuestas de diseño gráfico y tipográfico. Cada cartel tiene su propia composición, paleta y tratamiento tipográfico según la obra que representa.</p>
+    <div class="galeria">
+      <div class="media ancha"><button data-src="img/carteles-tipografia.png" aria-label="Ampliar carteles tipográficos"><img src="img/carteles-tipografia.png" alt="Carteles Tipografías clásicas, Bodoni y Garamond, y Anatomía tipográfica" loading="lazy"></button></div>
+      <div class="media ancha"><button data-src="img/carteles-her-luna.png" aria-label="Ampliar carteles Her e Hijo de la Luna"><img src="img/carteles-her-luna.png" alt="Carteles de la película Her y de la canción Hijo de la Luna" loading="lazy"></button></div>
+    </div>
+    <div class="notas">
+      <p class="nota"><strong>Her</strong>Cartel cinematográfico basado en una ilustración del protagonista, minimalista y con colores intensos sobre fondo azul.</p>
+      <p class="nota"><strong>Hijo de la Luna</strong>Formas geométricas, contrastes de color y una composición dinámica para contar el carácter dramático de la canción.</p>
+      <p class="nota"><strong>Tipografía</strong>Tres carteles sobre la historia de la letra: tipografías clásicas, la Bodoni y la anatomía de cada carácter con anotaciones.</p>
+    </div>
+  </section>
+
+  <!-- 04 SEÑALÉTICA -->
+  <section class="categoria wrap" aria-labelledby="c4">
+    <div class="cat-cab"><span class="num">04.</span><h2 id="c4">Señalética y pictogramas</h2></div>
+    <article class="proyecto">
+      <div class="media"><button data-src="img/louvre-plano.png" aria-label="Ampliar plano del Louvre"><img src="img/louvre-plano.png" alt="Panel con el mapa de plantas y recorridos del museo del Louvre" loading="lazy"></button></div>
+      <div class="mancha">
+        <h3>Señalética para el Louvre</h3>
+        <p>Un lenguaje geométrico y modular que facilita la orientación dentro del museo. Tipografía, pictogramas y color organizan la información de forma clara y accesible.</p>
+        <p>Los distintos soportes se adaptan a los espacios y recorridos del edificio.</p>
+      </div>
+    </article>
+    <div class="galeria">
+      <div class="media ancha"><button data-src="img/louvre-senales.png" aria-label="Ampliar señales del Louvre"><img src="img/louvre-senales.png" alt="Directorios por planta y tótems con pictogramas para el Louvre" loading="lazy"></button></div>
+      <div class="media ancha"><button data-src="img/mms.png" aria-label="Ampliar señalética de M&amp;M's"><img src="img/mms.png" alt="Placas de departamento con los personajes de M&amp;M's en un pasillo de oficinas" loading="lazy"></button></div>
+    </div>
+    <p class="nota"><strong>Oficinas M&amp;M's</strong>Placas para cada departamento en las que los personajes de la marca representan la actividad de cada área, como Finanzas o Atención al cliente.</p>
+  </section>
+
+  <!-- 05 VÍDEO -->
+  <section class="categoria wrap" aria-labelledby="c5">
+    <div class="cat-cab"><span class="num">05.</span><h2 id="c5">Vídeo y animación</h2></div>
+    <p class="cat-intro">Propuestas con tonos muy distintos: una pieza misteriosa sobre el tarot, un anuncio navideño basado en una escena familiar y la parodia de un informativo con noticias absurdas. Imagen, sonido y narrativa al servicio del misterio, la publicidad y el humor.</p>
+    <div class="videos">
+      <figure class="video-item"><div class="video"><iframe src="https://www.youtube.com/embed/EEGROlO2hU8" title="Vídeo 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div><figcaption><a href="https://youtu.be/EEGROlO2hU8" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure>
+      <figure class="video-item"><div class="video"><iframe src="https://www.youtube.com/embed/lAF41cZbqUA" title="Vídeo 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div><figcaption><a href="https://youtu.be/lAF41cZbqUA" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure>
+      <figure class="video-item"><div class="video"><iframe src="https://www.youtube.com/embed/9SA2xdPDRRw" title="Vídeo 3" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div><figcaption><a href="https://youtu.be/9SA2xdPDRRw" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure>
+      <figure class="video-item"><div class="video"><iframe src="https://www.youtube.com/embed/u6XwZLilCJU" title="Vídeo 4" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div><figcaption><a href="https://youtu.be/u6XwZLilCJU" target="_blank" rel="noopener">Ver en YouTube</a></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 06 FIGMA -->
+  <section class="categoria wrap" aria-labelledby="c6">
+    <div class="cat-cab"><span class="num">06.</span><h2 id="c6">Diseño de interfaz</h2></div>
+    <article class="proyecto inv">
+      <div class="media"><button data-src="img/figma-teams.png" aria-label="Ampliar restyling de Teams"><img src="img/figma-teams.png" alt="Restyling de Microsoft Teams en pantallas de móvil, portátil, monitor y proyector" loading="lazy"></button></div>
+      <div class="mancha">
+        <span class="etiqueta">Figma</span>
+        <h3>Restyling de Teams</h3>
+        <p>Rediseño de una aplicación existente, Microsoft Teams, para resolver los problemas de organización y navegación de la propia aplicación.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 07 YLLERA -->
+  <section class="categoria wrap" aria-labelledby="c7">
+    <div class="cat-cab"><span class="num">07.</span><h2 id="c7">Prácticas en Bodegas Yllera</h2></div>
+    <p class="cat-intro">Aplicaciones de identidad y experiencia para el restaurante Arrope y el enoturismo de Yllera.</p>
+    <div class="galeria">
+      <div class="media"><button data-src="img/yllera-1.png" aria-label="Ampliar señalética de la bodega histórica"><img src="img/yllera-1.png" alt="Señal de Bodega Histórica y Arrope junto a botellas de Yllera" loading="lazy"></button></div>
+      <div class="media"><button data-src="img/yllera-2.png" aria-label="Ampliar señal de la sala de catas"><img src="img/yllera-2.png" alt="Señal de Arrope y Sala de catas en una galería de ladrillo" loading="lazy"></button></div>
+      <div class="media"><button data-src="img/yllera-3.png" aria-label="Ampliar directorio junto al ascensor"><img src="img/yllera-3.png" alt="Directorio de plantas junto al ascensor de la bodega" loading="lazy"></button></div>
+      <div class="media"><button data-src="img/yllera-4.png" aria-label="Ampliar señal junto a las barricas"><img src="img/yllera-4.png" alt="Señal de Arrope y Sala de catas sobre barricas" loading="lazy"></button></div>
+      <div class="media"><button data-src="img/yllera-mantel.png" aria-label="Ampliar mantel de cata"><img src="img/yllera-mantel.png" alt="Mantel de cata con cuatro posiciones y códigos QR" loading="lazy"></button></div>
+      <div class="media"><button data-src="img/yllera-tarjeta.png" aria-label="Ampliar tarjetas de visita"><img src="img/yllera-tarjeta.png" alt="Tarjetas de visita de Arrope y Yllera Enoturismo" loading="lazy"></button></div>
+    </div>
+    <div class="notas">
+      <p class="nota"><strong>Señalética</strong>Acompaña al visitante durante el recorrido con materiales, tonos y formas que dialogan con el entorno histórico, sin romper la atmósfera del lugar.</p>
+      <p class="nota"><strong>Mantel</strong>Soporte integrado en la degustación: organiza las cuatro posiciones de cada comensal e incluye códigos QR hacia El Hilo de Ariadna y el restaurante.</p>
+      <p class="nota"><strong>Tarjeta de visita</strong>Dos caras diferenciadas, una para Arrope y otra para Yllera, que refuerzan la conexión entre restaurante, bodega y enoturismo.</p>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- SOBRE MÍ -->
+  <section class="sobre" id="sobre-mi" aria-labelledby="t-sobre">
+    <div class="wrap">
+      <h2 id="t-sobre">Sobre mí</h2>
+      <div class="sobre-grid">
+        <div>
+          <p>Soy diseñadora gráfica con formación en diseño y experiencia profesional en Bodegas Yllera. Me especializo en identidad visual, packaging, tipografía, cartelería, señalética e infografía.</p>
+          <p>Me enfoco en desarrollar conceptos visuales con una intención clara, combinando creatividad, funcionalidad y atención al detalle. Destaco por mi capacidad de trabajo en equipo, por aportar nuevas ideas y por orientarme a proyectos con objetivos concretos.</p>
+          <h3>Experiencia</h3>
+          <div class="dato"><b>Prácticas</b><span>Bodegas Yllera</span></div>
+          <p>Tarjetas, presentaciones, cartelería, señalética, carteles de mesa y manteles, además de piezas de vídeo y animación.</p>
+          <h3>Formación</h3>
+          <div class="dato"><b>Grado en Diseño Gráfico</b><span>2022 – 2026</span></div>
+          <p>Escuela Superior de Diseño de Valladolid (ESI). Experiencia práctica mediante concursos y proyectos reales para empresas.</p>
+        </div>
+        <div>
+          <h3>Herramientas</h3>
+          <ul class="herramientas">
+            <li><span class="nombre">Adobe Illustrator<span class="nivel">Avanzado</span></span><span class="barra" role="img" aria-label="Nivel avanzado"><i style="width:90%"></i></span></li>
+            <li><span class="nombre">Figma<span class="nivel">Avanzado</span></span><span class="barra" role="img" aria-label="Nivel avanzado"><i style="width:90%"></i></span></li>
+            <li><span class="nombre">Glyphs<span class="nivel">Avanzado</span></span><span class="barra" role="img" aria-label="Nivel avanzado"><i style="width:90%"></i></span></li>
+            <li><span class="nombre">Adobe Photoshop<span class="nivel">Usuario</span></span><span class="barra" role="img" aria-label="Nivel usuario"><i style="width:70%"></i></span></li>
+            <li><span class="nombre">Adobe InDesign<span class="nivel">Usuario</span></span><span class="barra" role="img" aria-label="Nivel usuario"><i style="width:70%"></i></span></li>
+            <li><span class="nombre">Adobe Premiere Pro<span class="nivel">Usuario</span></span><span class="barra" role="img" aria-label="Nivel usuario"><i style="width:70%"></i></span></li>
+            <li><span class="nombre">Adobe After Effects<span class="nivel">Básico</span></span><span class="barra" role="img" aria-label="Nivel básico"><i style="width:45%"></i></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto wrap" id="contacto" aria-labelledby="t-contacto">
+    <h2 id="t-contacto">Hablemos.</h2>
+    <p>Estoy abierta a nuevos proyectos y oportunidades. Escríbeme y te respondo lo antes posible.</p>
+    <div class="contacto-lista">
+      <a class="btn lleno" href="mailto:carmenmfdesign@outlook.com">carmenmfdesign@outlook.com</a>
+      <a class="btn borde" href="https://www.linkedin.com/in/cmrcos" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn borde" href="cv.pdf" download="CV-Carmen-Marcos.pdf">Descargar CV</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">© 2026 Carmen Marcos Fernández</footer>
+
+<dialog id="visor" aria-label="Imagen ampliada">
+  <button class="cerrar" autofocus>Cerrar</button>
+  <img src="" alt="">
+</dialog>
+
+<script>
+const visor=document.getElementById('visor');
+const vImg=visor.querySelector('img');
+document.querySelectorAll('.media button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const src=b.querySelector('img');
+    vImg.src=b.dataset.src; vImg.alt=src.alt;
+    visor.showModal();
+  });
+});
+visor.querySelector('.cerrar').addEventListener('click',()=>visor.close());
+visor.addEventListener('click',e=>{if(e.target===visor||e.target===vImg)visor.close();});
+</script>
+</body>
+</html>
