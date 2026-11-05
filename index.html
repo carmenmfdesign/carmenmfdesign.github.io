@@ -93,6 +93,8 @@ nav a:hover{color:var(--magenta)}
 
 /* TFG destacado */
 .destacado{--azul:#1D2A55;background:var(--azul);color:var(--crema);padding-block:clamp(4rem,9vw,8rem)}
+.cat-tfg{font-weight:600;font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--crema)}
+.destacado .cat-cab{margin-bottom:1.2rem}
 .destacado .sello{display:inline-block;background:var(--magenta);color:var(--blanco);font-weight:600;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:.35rem 1rem;margin-bottom:1.4rem}
 .destacado h2{font-family:var(--serif);font-weight:800;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.98;margin:0 0 .6rem;color:var(--crema)}
 .destacado .subtitulo{font-size:clamp(1.15rem,2vw,1.4rem);color:#C9CDE0;margin:0 0 clamp(2rem,4vw,3rem);max-width:52ch}
@@ -163,8 +165,8 @@ dialog .cerrar{position:fixed;top:1rem;right:calc(var(--banda) + 1rem);backgroun
   <div class="wrap">
         <a class="firma" href="#inicio">Carmen Marcos</a>
     <nav aria-label="Principal">
-      <a href="#tfg">TFG</a>
       <a href="#trabajos">Trabajos</a>
+      <a href="#tfg">TFG</a>
       <a href="#sobre-mi" class="opcional">Sobre mí</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -185,37 +187,6 @@ dialog .cerrar{position:fixed;top:1rem;right:calc(var(--banda) + 1rem);backgroun
     </figure>
   </section>
 
-  <!-- TFG: PROYECTO DESTACADO -->
-  <section class="destacado" id="tfg" aria-labelledby="t-tfg">
-    <div class="wrap">
-      <span class="sello">Trabajo de Fin de Grado</span>
-      <h2 id="t-tfg">K1205: La Pulchra Leonina</h2>
-      <p class="subtitulo">Identidad visual, packaging y componentes de un juego de mesa sobre la Catedral de León.</p>
-      <div class="media principal"><button data-src="img/tfg-caja-tablero.jpg" aria-label="Ampliar caja y tablero de La Pulchra Leonina"><img src="img/tfg-caja-tablero.jpg" alt="Caja del juego La Pulchra Leonina junto al tablero azul con la planta de la catedral, mazos de cartas, fichas y dado"></button></div>
-      <div class="tfg-texto">
-        <div>
-          <p>K1205: Pulchra Leonina es el desarrollo integral de la identidad visual, el packaging y los componentes de un juego de mesa de divulgación cultural y pedagógica centrado en la Catedral de León.</p>
-          <p>El proyecto nace de una motivación personal y de mi vínculo previo con el arte del vidrio. Busca conectar el patrimonio histórico con el público actual a través del diseño y del aprendizaje mediante el juego (<i>learning by playing</i>).</p>
-          <p>La propuesta reinterpreta el gótico con una estética contemporánea, alejada de los recargamientos oscuros.</p>
-        </div>
-        <ul class="claves">
-          <li><b>Tablero</b><span>Trazado sobre la planta real del templo.</span></li>
-          <li><b>Fichas</b><span>Inspiradas en personajes históricos y tradicionales.</span></li>
-          <li><b>Mecánicas</b><span>Exploración espacial, retos de preguntas y cartas de colección.</span></li>
-        </ul>
-      </div>
-      <div class="media tfg-bloque"><button data-src="img/tfg-componentes.jpg" aria-label="Ampliar componentes del juego"><img src="img/tfg-componentes.jpg" alt="Componentes del juego: manual de instrucciones, hoja de casillas, tablero, mazos de cartas y fichas de personajes" loading="lazy"></button></div>
-
-      <div class="tfg-cierre">
-        <div class="tfg-cierre-texto">
-          <h3>El tablero</h3>
-          <p>Trazado sobre la planta real de la catedral, con casillas que se dividen en historia y arte, arquitectura y curiosidades, además de casillas de carta y especiales.</p>
-          <p>Junto a él, las fichas de personajes y los reversos de cada mazo.</p>
-        </div>
-        <div class="media"><button data-src="img/tfg-tablero-fichas.png" aria-label="Ampliar diseño del tablero, fichas y cartas"><img src="img/tfg-tablero-fichas.png" alt="Diseño plano del tablero con la planta de la catedral, las fichas de personajes y los reversos de las cartas" loading="lazy"></button></div>
-      </div>
-    </div>
-  </section>
 
   <div id="trabajos">
 
@@ -352,6 +323,38 @@ dialog .cerrar{position:fixed;top:1rem;right:calc(var(--banda) + 1rem);backgroun
   </section>
 
   </div>
+
+  <!-- TFG: PROYECTO DESTACADO -->
+  <section class="destacado" id="tfg" aria-labelledby="t-tfg">
+    <div class="wrap">
+      <div class="cat-cab"><span class="num">08.</span><span class="cat-tfg">Trabajo de Fin de Grado</span></div>
+      <h2 id="t-tfg">K1205: La Pulchra Leonina</h2>
+      <p class="subtitulo">Identidad visual, packaging y componentes de un juego de mesa sobre la Catedral de León.</p>
+      <div class="media principal"><button data-src="img/tfg-caja-tablero.jpg" aria-label="Ampliar caja y tablero de La Pulchra Leonina"><img src="img/tfg-caja-tablero.jpg" alt="Caja del juego La Pulchra Leonina junto al tablero azul con la planta de la catedral, mazos de cartas, fichas y dado"></button></div>
+      <div class="tfg-texto">
+        <div>
+          <p>K1205: Pulchra Leonina es el desarrollo integral de la identidad visual, el packaging y los componentes de un juego de mesa de divulgación cultural y pedagógica centrado en la Catedral de León.</p>
+          <p>El proyecto nace de una motivación personal y de mi vínculo previo con el arte del vidrio. Busca conectar el patrimonio histórico con el público actual a través del diseño y del aprendizaje mediante el juego (<i>learning by playing</i>).</p>
+          <p>La propuesta reinterpreta el gótico con una estética contemporánea, alejada de los recargamientos oscuros.</p>
+        </div>
+        <ul class="claves">
+          <li><b>Tablero</b><span>Trazado sobre la planta real del templo.</span></li>
+          <li><b>Fichas</b><span>Inspiradas en personajes históricos y tradicionales.</span></li>
+          <li><b>Mecánicas</b><span>Exploración espacial, retos de preguntas y cartas de colección.</span></li>
+        </ul>
+      </div>
+      <div class="media tfg-bloque"><button data-src="img/tfg-componentes.jpg" aria-label="Ampliar componentes del juego"><img src="img/tfg-componentes.jpg" alt="Componentes del juego: manual de instrucciones, hoja de casillas, tablero, mazos de cartas y fichas de personajes" loading="lazy"></button></div>
+
+      <div class="tfg-cierre">
+        <div class="tfg-cierre-texto">
+          <h3>El tablero</h3>
+          <p>Trazado sobre la planta real de la catedral, con casillas que se dividen en historia y arte, arquitectura y curiosidades, además de casillas de carta y especiales.</p>
+          <p>Junto a él, las fichas de personajes y los reversos de cada mazo.</p>
+        </div>
+        <div class="media"><button data-src="img/tfg-tablero-fichas.png" aria-label="Ampliar diseño del tablero, fichas y cartas"><img src="img/tfg-tablero-fichas.png" alt="Diseño plano del tablero con la planta de la catedral, las fichas de personajes y los reversos de las cartas" loading="lazy"></button></div>
+      </div>
+    </div>
+  </section>
 
   <!-- SOBRE MÍ -->
   <section class="sobre" id="sobre-mi" aria-labelledby="t-sobre">
