@@ -105,6 +105,11 @@ nav a:hover{color:var(--magenta)}
 .claves b{display:block;font-family:var(--serif);font-size:1.2rem;color:var(--blanco)}
 .claves span{color:#C9CDE0}
 .destacado .galeria{margin-top:0}
+.tfg-bloque{margin-bottom:clamp(3.5rem,8vw,6.5rem)}
+.tfg-cierre{display:grid;grid-template-columns:.32fr .68fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:end;border-top:1px solid rgba(242,240,235,.25);padding-top:clamp(2.5rem,5vw,4rem)}
+.tfg-cierre h3{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.05;margin:0 0 1rem;color:var(--blanco)}
+.tfg-cierre p{margin:0 0 1rem;color:#C9CDE0;max-width:34ch}
+.tfg-cierre p:last-child{margin-bottom:0}
 
 /* Sobre mí */
 .sobre{background:var(--blanco);padding-block:clamp(4rem,8vw,7rem)}
@@ -141,7 +146,7 @@ dialog .cerrar{position:fixed;top:1rem;right:calc(var(--banda) + 1rem);backgroun
   .retrato{width:min(70%,300px);margin-top:1rem}
   .galeria.tres,.notas,.videos{grid-template-columns:1fr}
   .galeria{grid-template-columns:1fr}
-  .tfg-texto{grid-template-columns:1fr}
+  .tfg-texto,.tfg-cierre{grid-template-columns:1fr}
   nav a.opcional{display:none}
   .mancha,.proyecto.inv .mancha{border-radius:46% 54% 42% 58% / 14% 18% 14% 18%;padding:2.6rem 1.8rem}
 }
@@ -199,8 +204,14 @@ dialog .cerrar{position:fixed;top:1rem;right:calc(var(--banda) + 1rem);backgroun
           <li><b>Mecánicas</b><span>Exploración espacial, retos de preguntas y cartas de colección.</span></li>
         </ul>
       </div>
-      <div class="galeria">
-        <div class="media"><button data-src="img/tfg-componentes.jpg" aria-label="Ampliar componentes del juego"><img src="img/tfg-componentes.jpg" alt="Componentes del juego: manual de instrucciones, hoja de casillas, tablero, mazos de cartas y fichas de personajes" loading="lazy"></button></div>
+      <div class="media tfg-bloque"><button data-src="img/tfg-componentes.jpg" aria-label="Ampliar componentes del juego"><img src="img/tfg-componentes.jpg" alt="Componentes del juego: manual de instrucciones, hoja de casillas, tablero, mazos de cartas y fichas de personajes" loading="lazy"></button></div>
+
+      <div class="tfg-cierre">
+        <div class="tfg-cierre-texto">
+          <h3>El tablero</h3>
+          <p>Trazado sobre la planta real de la catedral, con casillas que se dividen en historia y arte, arquitectura y curiosidades, además de casillas de carta y especiales.</p>
+          <p>Junto a él, las fichas de personajes y los reversos de cada mazo.</p>
+        </div>
         <div class="media"><button data-src="img/tfg-tablero-fichas.png" aria-label="Ampliar diseño del tablero, fichas y cartas"><img src="img/tfg-tablero-fichas.png" alt="Diseño plano del tablero con la planta de la catedral, las fichas de personajes y los reversos de las cartas" loading="lazy"></button></div>
       </div>
     </div>
